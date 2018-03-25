@@ -1,0 +1,42 @@
+<view class="container">
+  <view>
+    <text class="address">工作单位：</text>
+    <text class="text">微软（亚洲）互联网工程院</text>
+  </view>
+  <view>
+    <text class="time">起止日期：</text>
+    <text class="text">2017/06 —— 2017/09</text>
+  </view>
+  <view>
+    <text class="work">职位：</text>
+    <text class="text">开发实习生</text>
+  </view>
+  <view class="describe">
+    <text>工作描述：</text>
+    <view class="text">
+      <text decode="{{true}}"space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;在导师的指导下设计完成智能问答机器人的开发，并应用在微软内部使用的</text><text class="highLight" bindtouchstart='clickConflationTool'>Conflation Tool</text>上。该项目基于<text class="highLight" bindtouchstart='clickBotFramework'>Bot Framework</text>和<text class="highLight" bindtouchstart='clickMVC'>.Net MVC</text>框架开发，自行收集<text class="highLight" bindtouchstart='clickQnAPair'>Question&Answer Pair</text>组建知识库。使用者可以通过图形界面向Bot进行咨询，开发人员也可通过网页对Bot的知识库进行管理。
+    </view>
+  </view>
+  <view>
+    <text class='describe'>视频简介:</text>
+    <video class="video" src="http://ospargvdr.bkt.clouddn.com/media1.mp4" controls></video>
+  </view>
+</view>
+<!--弹窗-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showConflationModal || showBotFrameworkModal || showMVCModal || showQnAPairModal}}"></view>
+<view class="modal-dialog" wx:if="{{showConflationModal}}">
+  <text class='modelDescribe'>Conflation Tool:</text>
+  <text class='text'>用于丰富和扩充knowledge graph的内容，可以将外部新数据源整合到自己的数据库。需要从客观世界中获取海量原始数据，然后进行清洗并转化为能被该tool处理的形如RDF表示方法的数据格式，然后通过一系列复杂操作将原始数据并入到已存在的数据集中</text>
+</view>
+<view class="modal-dialog" wx:if="{{showBotFrameworkModal}}">
+  <text class='modelDescribe'>Bot Framework:</text>
+  <text class='text'>微软开发的一款可让任何人DIY属于自己的聊天机器人，通过语言理解智能服务(LUIS)和Azure Bot Service等服务，Bot framework可以理解自然语言并对图片进行分析。例如，你可以问他现在几点了，他可以回答现在是XX点。</text>
+</view>
+<view class="modal-dialog" wx:if="{{showMVCModal}}">
+  <text class='modelDescribe'>.Net MVC:</text>
+  <text class='text'>ASP.NET MVC是微软官方提供的以MVC模式为基础的ASP.NET Web应用程序(Web Application)框架,它由Castle的MonoRail而来，目前最新版本是ASP.NET MVC 5.2</text>
+</view>
+<view class="modal-dialog" wx:if="{{showQnAPairModal}}">
+  <text class='modelDescribe'>QnA Pair:</text>
+  <text class='text'>类似于key-value，每一个Question有且唯一对应一个Answer</text>
+</view>

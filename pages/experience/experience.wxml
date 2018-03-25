@@ -1,0 +1,35 @@
+<view class="container">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}">
+    <block wx:for="{{imgUrls}}" wx:key="*this">
+      <swiper-item>
+        <image src="{{item}}" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="name">
+    <text bindtap='touchOpenCV'>1：“基于OpenCV的车辆流量检测系统”</text>
+    <view class="text" wx:if="{{showOpenCvText}}">
+      <text class="time">起止日期：</text>2015/09 —— 2017/06
+      <text decode="{{true}}"space="{{true}}">\n\n&nbsp;&nbsp;&nbsp;&nbsp;通过高斯混合背景建模法，将视频中的车辆用矩形框标记出来并统计经过的车辆数目，同时可以自定义目标区域以及检测车辆的行进方向。\n&nbsp;&nbsp;&nbsp;&nbsp;该项目主要分为</text><text class="redLight">前景提取</text>、<text class="redLight">运动物体提取</text>、<text class="redLight">车辆计数</text>以及<text class="redLight">车型分类</text>这四部分,完成了前景提取、运动物体提取、车辆计数这三部分代码的编写。在完成的基础之上，研究并优化系统在复杂背景环境下车辆检测的准确性。
+    </view>
+  </view>
+  <!--第二个项目-->
+  <view class="name">
+    <text bindtap='touchWeChat'>2：“微信小程序-棋牌游戏开发”</text>
+    <view class="text" wx:if="{{showWeChatText}}">
+      <text class="time">起止日期：</text>2018/01 —— 2018/02
+      <text decode="{{true}}"space="{{true}}">\n\n&nbsp;&nbsp;&nbsp;&nbsp;该项目是集合牛牛、十点半以及四川麻将【还没做】的游戏平台。用户可以选择</text><text class="highLight" bindtap='fangKa'>房卡模式</text>跟其他用户一起玩，也可以选择<text class="highLight" bindtap='feiFangKa'>非房卡模式</text>跟电脑进行对战。
+    </view>
+  </view>
+</view>
+
+<!--弹窗-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showFangKaModal || showFeiFangKaModal}}"></view>
+<view class="modal-dialog" wx:if="{{showFangKaModal}}">
+  <text class='modelDescribe'>房卡模式:</text>
+  <text class='text'>类似于现实生活中的棋牌室，用户需要花费房卡建房间等待其他用户加入，建房间时可以选择时长以及倍率等。</text>
+</view>
+<view class="modal-dialog" wx:if="{{showFeiFangKaModal}}">
+  <text class='modelDescribe'>非房卡模式：</text>
+  <text class='text'>用户可以跟电脑玩家进行模拟游戏，电脑只具有极其简单的AI，这样玩起来会非常没有意思。例如我给十点半游戏设计的电脑出牌策略是：只要可能，不断要牌直到不能要牌或者场上只剩下你一个人。</text>
+</view>

@@ -1,0 +1,14 @@
+<view class="container">
+  <view class="info" wx:for="{{info}}" wx:key="infoId">
+    <text class="infoName">{{item.infoName}}</text>：
+    <block wx:if="{{item.phone}}">
+      <text class="infoVal {{item.phone}}" bindtap='callphone'>{{item.infoVal}}</text>
+    </block>
+    <block wx:elif="{{item.url}}">
+      <text class="infoVal {{item.url}}">{{item.infoVal}}</text>
+    </block>
+    <block wx:else>
+      <text class="infoVal">{{item.infoVal}}</text>
+    </block>
+  </view>
+</view>
