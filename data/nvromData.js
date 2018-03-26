@@ -1,14 +1,17 @@
-var infoList = [
+var userInfoList = [
   { "infoName": "姓名", "infoVal": "陈伟星" },
   { "infoName": "性别", "infoVal": "男" },
   { "infoName": "出生年月", "infoVal": "1992/11" },
   { "infoName": "政治面貌", "infoVal": "党员" },
   { "infoName": "电话", "infoVal": "15255156584", "phone": "phone" },
+];
+
+var userBackgroundList = [
   { "infoName": "毕业院校", "infoVal": "中国科学技术大学软件学院" },
   { "infoName": "学历", "infoVal": "硕士" },
   { "infoName": "毕业时间", "infoVal": "2018/12" },
   { "infoName": "邮箱", "infoVal": "nvrom397@gmail.com" },
-  { "infoName": "GitHub", "infoVal": "https://github.com/NvRom" ,"url":"url"},
+  { "infoName": "GitHub", "infoVal": "https://github.com/NvRom", "url": "url" },
   { "infoName": "求职意向", "infoVal": "C++开发/深度学习相关" }
 ];
 
@@ -27,6 +30,7 @@ var skillList = [
 ];
 
 module.exports = {
-  info: infoList,
+  userBackground: userBackgroundList,
+  userInfo: userInfoList,
   skill: skillList
 }

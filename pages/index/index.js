@@ -1,4 +1,4 @@
-var vitaeData = require('../../data/vitaeData.js');
+var nvromData = require('../../data/nvromData.js');
 
 Page({
 
@@ -20,7 +20,8 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      info: vitaeData.info
+      info: nvromData.userInfo,
+      background: nvromData.userBackground
     });
   },
 

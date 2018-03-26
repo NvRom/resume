@@ -24,19 +24,44 @@
 </view>
 <!--弹窗-->
 <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showConflationModal || showBotFrameworkModal || showMVCModal || showQnAPairModal}}"></view>
-<view class="modal-dialog" wx:if="{{showConflationModal}}">
-  <text class='modelDescribe'>Conflation Tool:</text>
-  <text class='text'>用于丰富和扩充knowledge graph的内容，可以将外部新数据源整合到自己的数据库。需要从客观世界中获取海量原始数据，然后进行清洗并转化为能被该tool处理的形如RDF表示方法的数据格式，然后通过一系列复杂操作将原始数据并入到已存在的数据集中</text>
-</view>
-<view class="modal-dialog" wx:if="{{showBotFrameworkModal}}">
-  <text class='modelDescribe'>Bot Framework:</text>
-  <text class='text'>微软开发的一款可让任何人DIY属于自己的聊天机器人，通过语言理解智能服务(LUIS)和Azure Bot Service等服务，Bot framework可以理解自然语言并对图片进行分析。例如，你可以问他现在几点了，他可以回答现在是XX点。</text>
-</view>
-<view class="modal-dialog" wx:if="{{showMVCModal}}">
-  <text class='modelDescribe'>.Net MVC:</text>
-  <text class='text'>ASP.NET MVC是微软官方提供的以MVC模式为基础的ASP.NET Web应用程序(Web Application)框架,它由Castle的MonoRail而来，目前最新版本是ASP.NET MVC 5.2</text>
-</view>
-<view class="modal-dialog" wx:if="{{showQnAPairModal}}">
-  <text class='modelDescribe'>QnA Pair:</text>
-  <text class='text'>类似于key-value，每一个Question有且唯一对应一个Answer</text>
-</view>
+<!--conflation tool-->
+<cover-view class="modal-dialog" wx:if="{{showConflationModal}}">
+  <cover-view class='modelDescribe'>Conflation Tool:</cover-view>
+  <cover-view class='item'>
+    <cover-image class='itemImage' style="width: 250rpx; height: 250rpx;" src='../../img/knowledge_graph.jpg' mode='aspectFit'></cover-image>
+    <cover-view class='itemText'>
+      用于丰富和扩充knowledge graph的内容，可以将外部新数据源整合到自己的数据库。需要从客观世界中获取海量原始数据，然后进行清洗并转化为能被该tool处理的形如RDF表示方法的数据格式，然后通过一系列复杂操作将原始数据并入到已存在的数据集中。
+    </cover-view>
+  </cover-view>
+</cover-view>
+<!--bot framework-->
+<cover-view class="modal-dialog" wx:if="{{showBotFrameworkModal}}">
+  <cover-view class='modelDescribe'>Bot Framework:</cover-view>
+  <cover-view class='item'>
+    <cover-image class='itemImage' style="width: 250rpx; height: 250rpx;" src='../../img/bot_framework.jpg' mode='aspectFit'>
+    </cover-image>
+    <cover-view class='itemText'>
+      微软开发的一款可让任何人DIY属于自己的聊天机器人，通过语言理解智能服务(LUIS)和Azure Bot Service等服务，Bot framework可以理解自然语言并对图片进行分析。例如，你可以问他:现在几点了? bot可以回答:现在是XX点。
+    </cover-view>
+  </cover-view>
+</cover-view>
+<!--.net mvc-->
+<cover-view class="modal-dialog" wx:if="{{showMVCModal}}">
+  <cover-view class='modelDescribe'>.Net MVC:</cover-view>
+  <cover-view class='item'>
+    <cover-image class='itemImage' style="width: 250rpx; height: 250rpx;" src='../../img/mvc.jpg' mode='aspectFit'></cover-image>
+    <cover-view class='itemText'>
+      ASP.NET MVC是微软官方提供的以MVC模式为基础的ASP.NET Web应用程序(Web Application)框架,它由Castle的MonoRail而来，目前最新版本是ASP.NET MVC 5.2。
+    </cover-view>
+  </cover-view>
+</cover-view>
+<!--qna pair-->
+<cover-view class="modal-dialog" wx:if="{{showQnAPairModal}}">
+  <cover-view class='modelDescribe'>QnA Pair:</cover-view>
+  <cover-view class='item'>
+    <cover-image class='itemImage' style="width: 250rpx; height: 250rpx;" src='../../img/pair.jpg' mode='aspectFit'></cover-image>
+    <cover-view class='itemText'>
+      类似于key-value，每一个Question有且唯一对应一个Answer
+    </cover-view>
+  </cover-view>
+</cover-view>

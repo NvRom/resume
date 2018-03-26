@@ -37,20 +37,39 @@
   left: 0;
   background: #000;
   opacity: 0.5;
-  overflow: hidden;
-  z-index: 1;
+  z-index: 9000;
   color: #fff;
 }
 
 .modal-dialog {
   width: 100%;
-  overflow: hidden;
   position: fixed;
   top: 30%;
-  z-index: 2;
+  z-index: 9999;
   background: #f9f9f9;
   border-radius: 20rpx;
-  word-break:break-all;
+}
+
+.item{
+  display: flex;
+  flex-direction: row;
+}
+
+.itemText{
+  width: 70%;
+  font-size: 30rpx;
+  color: #333;
+  font-weight: bold;
+  margin-left: 30rpx;
+  padding-top: 25rpx;
+  line-height: 47rpx;
+  word-break: break-all;
+  word-wrap:break-word;
+  white-space:pre-line;
+}
+
+.itemImage{
+  padding-top: 35rpx;
 }
 
 page {
