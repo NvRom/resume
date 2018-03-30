@@ -23,7 +23,7 @@
   </view>
 </view>
 <!--弹窗-->
-<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showConflationModal || showBotFrameworkModal || showMVCModal || showQnAPairModal}}"></view>
+<cover-view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showConflationModal || showBotFrameworkModal || showMVCModal || showQnAPairModal}}"></cover-view>
 <!--conflation tool-->
 <cover-view class="modal-dialog" wx:if="{{showConflationModal}}">
   <cover-view class='modelDescribe'>Conflation Tool:</cover-view>

@@ -53,6 +53,8 @@
 .item{
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .itemText{
@@ -60,6 +62,7 @@
   font-size: 30rpx;
   color: #333;
   font-weight: bold;
+  align-items: center;
   margin-left: 30rpx;
   line-height: 47rpx;
   word-break: break-all;
@@ -68,7 +71,8 @@
 }
 
 .itemImage{
-  padding-top: 40rpx;
+  align-items: center;
+  margin-left: 10rpx;
 }
 
 page {
